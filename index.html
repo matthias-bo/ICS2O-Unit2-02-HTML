@@ -6,28 +6,35 @@
     <meta name="keywords" content="Javascript webpage">
     <meta name="author" content="Matthias Bo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Matthias's javascript webpage </title>
     </head>
-    <body>
+    <body id="background">
     <h1>Matthias's amazing webpage</h1>
     <p>Hello, World</p>
-    <img id="changeimage" src="./images/sadpeter.jpg" style="width:500px">
-    <p id="button" onclick="Button()">
-    <button onclick="document.getElementById('myImage').src='happypeter.gif'">Happy Peter</button>
-    
-    <button onclick="document.getElementById('myImage').src='sadpeter.gif'">Sad peter</button>
+    <img id="changeimage" src="./images/sadpeter.jpg">
+    <button onclick="myfunction2()">Happy Peter</button>
+    <button onclick="myfunction3()">Sad peter</button>
     <p id="demo">Click here for a secret</p>
+    <button onclick="myfunction4()">Change background colour</button>
+    <p id="disappear" onclick="myfunction5()">Make text disappear</p>
     <script>
       document.getElementById("demo").addEventListener("click", myFunction);
       function myFunction() {
         document.getElementById("demo").innerHTML = "Just kidding lol, there is no secret";
       }
        function myfunction2() {
-        document.getElementById('demo').src='./images/happypeter.jpg'
-       }
+        document.getElementById('changeimage').src='./images/happypeter.jpg'
+      }
        function myfunction3() {
-         document.getElementById('demo').src='./images/sadpeter.jpg'
-       }
+         document.getElementById('changeimage').src='./images/sadpeter.jpg'
+      }
+       function myfunction4() {
+         document.getElementById('background').style.backgroundColor= 'slateblue';
+      }
+       function myfunction5() {
+         document.getElementById('disappear').style.display= 'none';
+      }
     </script>
     </body>
   </html>
