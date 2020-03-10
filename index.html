@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Unit2-02">
+    <meta name="keywords" content="Javascript webpage">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthias's javascript webpage </title>
+    </head>
+    <body>
+    <h1>Matthias's amazing webpage</h1>
+    <p>Hello, World</p>
+    <img id="changeimage" src="./images/sadpeter.jpg" style="width:500px">
+    <p id="button" onclick="Button()">
+    <button onclick="document.getElementById('myImage').src='happypeter.gif'">Happy Peter</button>
+    
+    <button onclick="document.getElementById('myImage').src='sadpeter.gif'">Sad peter</button>
+    <p id="demo">Click here for a secret</p>
+    <script>
+      document.getElementById("demo").addEventListener("click", myFunction);
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Just kidding lol, there is no secret";
+      }
+       function myfunction2() {
+        document.getElementById('demo').src='./images/happypeter.jpg'
+       }
+       function myfunction3() {
+         document.getElementById('demo').src='./images/sadpeter.jpg'
+       }
+    </script>
+    </body>
+  </html>
